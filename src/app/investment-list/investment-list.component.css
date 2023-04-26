@@ -1,0 +1,20 @@
+.disabled {
+    background-color: lightgray;
+}
+
+tr.disabled:hover {
+    background-color: lightgray;
+}
+
+tr.enabled {
+    cursor: pointer;
+}
+
+tr.enabled:hover {
+    background-color: #ebebeb;
+}
+
+tr.enabled td.mat-column-nome {
+   text-decoration: underline;
+}
+
