@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,7 +9,9 @@ import { InvestmentDetailsComponent } from './investment-details/investment-deta
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 import { LOCALE_ID } from '@angular/core';
 import localePt from '@angular/common/locales/pt';
 import {registerLocaleData} from '@angular/common';
@@ -29,7 +32,10 @@ registerLocaleData(localePt)
     MatCardModule,
     MatTableModule,
     MatDividerModule,
+    MatInputModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    CurrencyMaskModule,
     AppRoutingModule
   ],
   providers: [{

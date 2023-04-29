@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { InvestmentService } from '@services/investment/investment.service';
+import { InvestmentsInterface } from '@interfaces/investment.interface';
 import { catchError } from 'rxjs';
 
 @Component({
@@ -10,7 +11,7 @@ import { catchError } from 'rxjs';
 })
 export class InvestmentListComponent implements OnInit {
 
-  investmentList = [];
+  investmentList!: InvestmentsInterface[];
   displayedColumns: string[] = ['nome', 'objetivo', 'saldoTotal'];
 
   constructor(private investmentService: InvestmentService, private router: Router) {}

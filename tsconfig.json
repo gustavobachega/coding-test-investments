@@ -20,7 +20,8 @@
     "module": "ES2022",
     "paths": {
       "@commons/*": ["src/app/commons/*"],
-      "@services/*": ["src/app/services/*"]
+      "@services/*": ["src/app/services/*"],
+      "@interfaces/*": ["src/app/interfaces/*"]
     },
     "useDefineForClassFields": false,
     "lib": [

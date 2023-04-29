@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { endpoints } from '@commons/endpoints/endpoints.utils';
+import { InvestmentsInterface } from '@interfaces/investment.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,6 @@ export class InvestmentService {
   public getInvestments(): Observable<any> {
     const endpoint = `${endpoints.investiments}`;
 
-    return this.http.get<any>(endpoint);
+    return this.http.get<InvestmentsInterface>(endpoint);
   }
 }
