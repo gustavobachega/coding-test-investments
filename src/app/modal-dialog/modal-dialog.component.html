@@ -1,0 +1,13 @@
+<h1 mat-dialog-title *ngIf="!errors.length" class="modal-title">Resgate efetuado com sucesso!</h1>
+<h1 mat-dialog-title *ngIf="errors.length" class="modal-title">DADOS INVÁLIDOS!</h1>
+
+<mat-dialog-content *ngIf="errors.length" class="mat-typography">
+<h3>Você preencheu um ou mais campos com valores acima do permitido:</h3>
+<p *ngFor="let error of errors"><strong>{{ error.nome }}: </strong> O valor a resgatar não pode ser maior que <strong>{{error.saldoAcumulado | currency:'BRL'}}</strong></p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close *ngIf="!errors.length" class="modal-button" (click)="goHome()">NOVO RESGATE</button>
+    <button mat-button mat-dialog-close *ngIf="errors.length" class="modal-button">CORRIGIR</button>
+</mat-dialog-actions>
+  

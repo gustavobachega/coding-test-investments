@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InvestmentListComponent } from './investment-list.component';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { MatTableModule } from '@angular/material/table'  
 
 describe('InvestmentListComponent', () => {
   let component: InvestmentListComponent;
@@ -8,7 +10,8 @@ describe('InvestmentListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InvestmentListComponent ]
+      declarations: [ InvestmentListComponent ],
+      imports: [HttpClientTestingModule, MatTableModule] 
     })
     .compileComponents();
 
